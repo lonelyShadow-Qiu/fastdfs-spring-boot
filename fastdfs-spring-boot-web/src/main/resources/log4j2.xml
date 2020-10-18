@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	 <Properties>       
+        <Property name="CONSOLE_LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} | %thread | %p | %c,%L,%M | -- %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${sys:CONSOLE_LOG_PATTERN}" charset="UTF-8" />
+        </Console>
+    </Appenders>
+     
+    <Loggers>
+    	<logger name="com.apache.ibatis" level="INFO"/>
+    	<logger name="java.sql.Connection" level="INFO"/>
+    	<logger name="java.sql.Statement" level="INFO"/>
+    	<logger name="java.sql.PreparedStatement" level="INFO"/>
+    	<logger name="com.alibaba.dubbo" level="WARN"/>
+    	<logger name="org.apache.rocketmq" level="WARN"/>
+    	<logger name="org.springframework.web" level="WARN"/>
+        <logger name="com.github.tobato" level="DEBUG"/>
+        <root level="INFO">
+            <appender-ref ref="Console" />
+        </root>
+    </Loggers>
+</Configuration>

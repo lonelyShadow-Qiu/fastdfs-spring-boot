@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.tobato.fastdfs.autoconfiguration.FastdfsAutoConfiguration
+org.springframework.context.ApplicationListener=\
+com.github.tobato.fastdfs.context.event.FastdfsBannerApplicationListener
